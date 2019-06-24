@@ -7,9 +7,9 @@ def test_add_unique_identifier():
     test_df = pd.DataFrame({'chiller_number': [1, 2, 3],
                             'company_number': [1, 2, 3]})
     df = add_unique_identifier(test_df)
-    assert df.columns[2] == 'unique_identifier', \"Create identifier failed"
+    assert df.columns[2] == 'unique_identifier', "Create identifier failed"
     assert np.all(df['unique_identifier'].values ==
-                    ['11', '22', '33']), \"Identifier error"
+                    ['11', '22', '33']), "Identifier error"
 
 
 def test_separate_df(df, string):
